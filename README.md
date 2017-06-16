@@ -6,7 +6,7 @@ This is simple firewall writed by Yonggang Guo.
 Date: 2017.06.16
 
 ## Step to set kernel:
-# =================================================
+# =========================================
 ## Step 1:
 # cp ipv4_hunter.c net/ipv4/netfilter/ipv4_hunter.c
 # ipv4_hunter.h cp include/net/ipv4_hunter.h
@@ -22,7 +22,7 @@ compile kernel source.
 
 ## step 4:
 fastboot the kernel to device.
-# ==================================================
+# ==========================================
 
 
 ## Step to set arguments:
