@@ -26,4 +26,4 @@ fastboot the kernel to device.
 
 
 ## Step to set arguments:
-Please use the tool inet_filter I supported.
+Please use the tool inet_filter I supported(which is in the branch inet_filter).
