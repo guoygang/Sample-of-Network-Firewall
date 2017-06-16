@@ -1,5 +1,5 @@
 # sample-net-firewall
-A sample net firewall
+A sample net firewall (# Test on Pixel phone)
 
 This is simple network firewall writed by Yonggang Guo \<hero.gariker@gmail.com\>.
 
