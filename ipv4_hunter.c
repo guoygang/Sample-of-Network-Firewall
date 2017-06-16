@@ -22,7 +22,6 @@ struct ip_node {
 	struct list_head list;
 };
 
-/* To protect the global link list */
 DEFINE_MUTEX(m_lock);
 spinlock_t s_lock;
 
