@@ -5,12 +5,12 @@ This is simple network firewall writed by Yonggang Guo \<hero.gariker@gmail.com\
 
 ## Step to set kernel:
 Step 1:
-cp ipv4_hunter.c net/ipv4/netfilter/ipv4_hunter.c
+cp ipv4_hunter.c net/ipv4/netfilter/ipv4_hunter.c\n
 cp ipv4_hunter.h cp include/net/ipv4_hunter.h
 
 step 2:
-vim net/ipv4/netfilter/Makefile
-and add the content as followed:
+vim net/ipv4/netfilter/Makefile\n
+and add the content as followed:\n
 obj-y += ipv4_hunter.o
 
 step 3:
