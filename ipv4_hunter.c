@@ -16,13 +16,13 @@
 
 #define IP_BLOCK_CACHE_NAME "ip_block"
 
-/* IP block function */
+/* IP block node */
 struct ip_node {
 	__be32 addr;
 	struct list_head list;
 };
 
-/* To protect the globle link list */
+/* To protect the global link list */
 DEFINE_MUTEX(m_lock);
 spinlock_t s_lock;
 
