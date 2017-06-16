@@ -284,7 +284,6 @@ static struct file_operations ip_filter_ops = {
 	.unlocked_ioctl = ip_filter_ioctl,
 };
 
-
 static int __init ipv4_netfilter_init(void)
 {
 	ip_block_cache = kmem_cache_create(IP_BLOCK_CACHE_NAME, sizeof(struct ip_node),
