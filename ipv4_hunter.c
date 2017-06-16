@@ -205,7 +205,6 @@ static long ip_filter_ioctl(struct file *filp, unsigned int cmd, unsigned long a
 				return -ENOMEM;
 			}
 
-			printk(KERN_INFO "	---- hunter <%s> add ip:%s\n", __func__, ip_str);
 			ip_node->addr = ia.s_addr;
 			add_ip_node(ip_node);			
 		}	
@@ -235,7 +234,6 @@ static long ip_filter_ioctl(struct file *filp, unsigned int cmd, unsigned long a
 			if (!ip_in_block_list(ia.s_addr))
 				continue;
 
-			printk(KERN_INFO "	---- hunter <%s> del ip:%s\n", __func__, ip_str);
 			del_ip_node(ia.s_addr);
 		}
 
