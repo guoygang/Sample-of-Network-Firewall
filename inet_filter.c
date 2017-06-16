@@ -1,3 +1,8 @@
+/*
+ *	Author: Yonggang Guo <hero.gariker@gmail.com>
+ *	Date: 2017.06.16
+ */
+
 #include <stdio.h>
 #include <sys/types.h>  
 #include <sys/stat.h>    
