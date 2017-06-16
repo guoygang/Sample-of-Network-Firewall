@@ -1,7 +1,7 @@
 /*
- *	ipv4 nefilter for hook packet to or from www.baidu.com
- *	
- *	include 180.149.131.98 and etc.
+ *	ipv4 nefilter for hook packet to or from xxx.xxx.xxx.xxx
+ *
+ *	Author: Yonggang Guo <hero.gariker@gmail.com>
  *
  */
 
@@ -32,20 +32,6 @@ LIST_HEAD(nf_ips);
 static struct kmem_cache *ip_block_cache;
 
 static unsigned long ip_nums;
-
-/*
-static char ip_block_list[][20] = {
-	"180.149.131.98",	// "www.baidu.com"
-	
-	"220.181.57.196", // "www.m.baidu.com"
-	220.181.7.234
-	220.181.7.233
-	180.149.131.248
-
-	"171.8.167.31",		// "www.so.com"
-	180.163.251.63 : m.so.com
-};
-*/
 
 /* Warning : ia is big endian */
 static char *inet_ntoa(char *ip_buf, __be32 addr)
@@ -130,7 +116,6 @@ static void add_ip_node(struct ip_node *ip_node)
 	spin_unlock_irqrestore(&s_lock, flags);
 }
 
-///////////////////////////////////////////////////////////////////////////////
 static unsigned int ipv4_hook_firewall_in(const struct nf_hook_ops *ops,
 			       struct sk_buff *skb, const struct net_device *in,
 			       const struct net_device *out, int (*okfn)(struct sk_buff *))
@@ -175,7 +160,6 @@ static struct nf_hook_ops ipv4_netfilter[2] = {
 	},
 };
 
-////////////////////////////////////////////////////////////////////////////////////
 static int ip_filter_open(struct inode *inode, struct file *filp)
 {	
 	return 0;
