@@ -14,7 +14,6 @@
 #include <net/ip.h>
 #include <net/ipv4_hunter.h>
 
-
 #define IP_BLOCK_CACHE_NAME "ip_block"
 
 /* IP block function */
@@ -124,13 +123,8 @@ static unsigned int ipv4_hook_firewall_in(const struct nf_hook_ops *ops,
 	char tmp_ip_buf[MAX_IP_LEN];
 	
 	iph = ip_hdr(skb);
-	if (ip_in_block_list(iph->saddr)) {
-		printk(KERN_INFO "	** [hunter] <%s> %s is coming, it is in block list.\n",
-			__func__, inet_ntoa(tmp_ip_buf, iph->saddr));
-
+	if (ip_in_block_list(iph->saddr))
 		return NF_DROP;
-	}
-	
 	return NF_ACCEPT;
 }
 
@@ -140,7 +134,6 @@ static unsigned int ipv4_hook_firewall_out(const struct nf_hook_ops *ops,
 {
 	return NF_ACCEPT;
 }
-
 
 // hook NF_INET_LOCAL_IN or NF_INET_LOCAL_OUT
 static struct nf_hook_ops ipv4_netfilter[2] = {
