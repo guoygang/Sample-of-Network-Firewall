@@ -48,10 +48,8 @@ static inline int open_ip_filter()
 	int fd;
 
 	fd = open("/proc/ip_filter", O_RDWR);
-	if (fd < 0) {
+	if (fd < 0) 
 		return -1;
-	}
-
 	return fd;
 }
 
@@ -67,8 +65,6 @@ static inline void close_ip_filter(int fd)
 {
 	close(fd);
 }
-
-
 
 int select_work_mode(int argc, char **argv)
 {
@@ -138,9 +134,8 @@ int main(int argc, char **argv)
 	printf(GREEN);      
 	select_work_mode(argc, argv);
 	fd = open_ip_filter();
-	if (fd < 0) {
+	if (fd < 0)
 		goto failed;		
-	}
 	
 	switch(work_mode) {
 	case ADD_ONE_NODE:
