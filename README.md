@@ -1,7 +1,7 @@
 # sample-net-firewall
 A sample net firewall
 
-This is simple network firewall writed by Yonggang Guo <hero.gariker@gmail.com>.
+This is simple network firewall writed by Yonggang Guo /<hero.gariker@gmail.com/>.
 
 # Step to set kernel:
 ## Step 1:
